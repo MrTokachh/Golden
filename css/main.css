@@ -1,3 +1,7 @@
+body * {
+	box-sizing: border-box ;
+}
+
 body {
 	position: relative;
 	font-family: Arial, sans-serif;
@@ -6,6 +10,12 @@ body {
 	color: #777777;
 	font-size: 14px;
 	line-height: 1.55;
+	min-width: 320px;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
 }
 
 .clearfix:after {
@@ -13,10 +23,6 @@ body {
 	display: table;
 	width: 100%;
 	clear: both;
-}
-
-div {
-	box-sizing: border-box;
 }
 
 h2 {
@@ -50,7 +56,7 @@ p {
 
 .hero-section {
 	background: url(../img/first-bg.jpg) no-repeat center top / cover;
-	padding: 180px 0 100px;
+	padding: 60px 0;
 }
 
 .container {
@@ -60,11 +66,13 @@ p {
 }
 
 .heading {
-	padding: 50px 0 0 0;
+	padding-top: 25px;
+	text-align: center;
 }
 
 .logo {
-	float: left;
+	width: 79px;
+	display: inline-block;
 }
 
 .logo img {
@@ -72,28 +80,24 @@ p {
 	display: block;
 }
 
-nav {
-	max-width: 85%;
-	float: right;
-}
 
 .menu {
 	padding: 0;
 	margin: 0;
-	display: block;
+	display: inline-block;
 }
 
 .menu li {
 	float: left;
 	display: block;
-	margin: 0 20px 5px;
+	margin: 0 4px 5px;
 }
 
 .menu a {
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 11px;
 }
 
 .menu a:hover {
@@ -104,17 +108,17 @@ nav {
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
-	margin: 0 0 50px;
+	margin-bottom: 50px;
 }
 
 .titles__first {
 	padding-top: 80px;
 	display: block;
-	font-size: 40px;
+	font-size: 20px;
 }
 
 h1 {
-	font-size: 75px;
+	font-size: 35px;
 	margin: 0 0 15px;
 }
 
@@ -128,14 +132,13 @@ h1 {
 	border-radius: 3px;
 	display: inline-block;
 	vertical-align: middle;
-	min-width: 240px;
-	padding: 20px;
+	min-width: 120px;
+	padding: 8px 16px;
 	text-decoration: none;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 18px;
-	transition: color: .3s linear;
+	transition: all 0.3s linear;
 }
 
 .button:hover{
@@ -144,29 +147,24 @@ h1 {
 
 .title {
 	text-align: center;
-	font-size: 16px;
-	margin-bottom: 65px;
+	margin-bottom: 30px;
 }
 
 .title h2 {
-	font-size: 40px;
+	font-size: 25px;
 	font-weight: bold;
 	text-transform: uppercase;
-	margin: 0;
+	margin: 0 0 10px;
 }
 
 .section-info {
-	padding: 115px 0 120px;
+	padding: 30px 0;
 }
 
 .section-info .column-4 {
-	padding: 0 17px;	
+	padding: 0 17px;
+	margin-bottom: 15px;
 	text-align: center;
-}
-
-.column-4 {
-	width: 33.33%;
-	float: left;
 }
 
 .bg-gray {
@@ -175,8 +173,10 @@ h1 {
 
 .column-4 .serv_img {
 	width: 74px;
-	margin: 0 auto;
-	padding: 0 0 20px;
+	height: 74px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 20px;
 }
 
 .column-4 img {
@@ -185,50 +185,23 @@ h1 {
 }
 
 #About_Us {
-	padding: 115px 0 0 0;
+	padding: 30px 0;
 }
 
-.about-text {
-	width:calc(100% - 185px) ;
-	float: left;
+.about-item {
+	margin-bottom: 15px;
 }
 
 .about-img {
 	width: 185px;
-	float: left;
+	height: 185px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 15px;
 }
 
-.about-item {
-	width: 60%;
-	margin-bottom:95px;
-}
-
-.about-item:nth-child(odd) {
-	float: left;
-}
-
-.about-item:nth-child(even) {
-	float: right;
-}
-
-.about-item:nth-child(odd) .about-text {
-	float: left;
-	text-align: right;
-	padding-right: 40px;
-}
-
-.about-item:nth-child(even) .about-text {
-	float: right;
-	text-align: left;
-	padding-left: 40px;
-}
-
-.about-item:nth-child(odd) .about-img {
-	float: right;
-}
-
-.about-item:nth-child(even) .about-img {
-	float: left;
+.about-text {
+	text-align: center;
 }
 
 .about-text .h3 {
@@ -242,6 +215,116 @@ h1 {
 }
 
 footer {
-    text-align: center;
-    margin: 0 0 115px;
-}﻿
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+	.heading {
+		padding-top: 50px;
+	}
+
+	.logo {
+		float: left;
+	}
+
+	.heading nav {
+		max-width: calc(100% - 79px);
+		float: right;
+	}
+
+	.menu li {
+		float: left;
+		margin: 0 20px 5px;
+	}
+
+	.menu a {
+		font-size: 14px;
+	}
+
+	.hero-section {
+		padding: 180px 0 100px;
+	}
+
+	.titles__first {
+		font-size: 40px;
+	}
+
+	h1 {
+		font-size: 75px;
+	}
+
+	.button {
+		min-width: 240px;
+		padding: 20px;
+		font-size: 18px;
+	}
+
+	.title {
+		font-size: 16px;
+		margin-bottom: 65px;
+	}
+
+	.title h2 {
+		font-size: 40px;
+	}
+
+	.section-info {
+		padding: 115px 0 120px;
+	}
+
+	.column-4 {
+		width: 33.33%;
+		float: left;
+	}
+
+	#About_Us {
+		padding: 115px 0 0;
+	}
+
+	.about-img {
+		float: left;
+	}
+
+	.about-text {
+		width:calc(100% - 185px) ;
+		float: left;
+	}
+
+	.about-item {
+		width: 60%;
+		margin-bottom:95px;
+	}
+
+	.about-item:nth-child(odd) {
+		float: left;
+	}
+
+	.about-item:nth-child(even) {
+		float: right;
+	}
+
+	.about-item:nth-child(odd) .about-text {
+		float: left;
+		text-align: right;
+		padding-right: 40px;
+	}
+
+	.about-item:nth-child(even) .about-text {
+		float: right;
+		text-align: left;
+		padding-left: 40px;
+	}
+
+	.about-item:nth-child(odd) .about-img {
+		float: right;
+	}
+
+	.about-item:nth-child(even) .about-img {
+		float: left;
+	}
+
+	footer {
+		margin-bottom: 115px;
+	}
+}
